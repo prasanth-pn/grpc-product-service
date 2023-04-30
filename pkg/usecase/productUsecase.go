@@ -9,7 +9,7 @@ import(
 type ProductUseCase struct{
 Repo services.ProductRepository
 }
-func NewProductUseCase(repo services.ProductRepository)service.ProductUseCase{
+func NewProductUseCase(repo services.ProductRepository)*ProductUseCase{
 	return &ProductUseCase{
 		Repo :repo,
 	}
