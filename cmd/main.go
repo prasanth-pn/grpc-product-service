@@ -7,6 +7,8 @@ import (
 
 	"github.com/prasanth-pn/grpc-product-service/pkg/config"
 	"github.com/prasanth-pn/grpc-product-service/pkg/db"
+	"github.com/prasanth-pn/grpc-product-service/pkg/repository"
+	"github.com/prasanth-pn/grpc-product-service/pkg/usecase"
 )
 
 func main() {
@@ -24,6 +26,8 @@ func main() {
 		log.Fatalf("failed to listening:",err)
 	}
 	sqlDB:=db.ConnectDB(c)
-	ProductRepository:=repository.NewAuthRepository
+	ProductRepository:=repository.NewAuthRepository(sqlDB)
+	productUsecase:=usecase.NewProductUseCase(ProductRepository)
+	handler.
 
 }
