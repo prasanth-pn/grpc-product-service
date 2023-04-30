@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"log"
-
+	_ "github.com/lib/pq"
 	"github.com/prasanth-pn/grpc-product-service/pkg/config"
 )
 
