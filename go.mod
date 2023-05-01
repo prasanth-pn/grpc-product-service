@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/go-playground/validator/v10 v10.12.0
+	github.com/lib/pq v1.10.9
 	github.com/spf13/viper v1.15.0
 	google.golang.org/grpc v1.54.0
 	google.golang.org/protobuf v1.30.0
