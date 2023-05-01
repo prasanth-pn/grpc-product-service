@@ -19,5 +19,9 @@ func NeWProductHandler(prodservice services.ProductUseCaseInterface) *ProductHan
 func (cr *ProductHandler) CreateProduct(ctx context.Context, req *pb.CreateProductRequest) (*pb.CreateProductResponse, error) {
 	fmt.Println("handler is initiated")
 
-	return &pb.CreateProductResponse{},nil
+	return &pb.CreateProductResponse{
+		Name: "prasanth",
+		Id: 3434,
+		Error: "ready",
+	},nil
 }
