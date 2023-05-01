@@ -14,6 +14,6 @@ func ConnectGorm(cfg config.Config) (*gorm.DB, error) {
 	})
 	fmt.Println("gorm connected")
 	db.AutoMigrate(&domain.Products{})
-	db.AutoMigrate(&domain.StockDecreaseLog)
+	db.AutoMigrate(&domain.StockDecreaseLog{})
 	return db, err
 }
